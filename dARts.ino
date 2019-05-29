@@ -45,7 +45,7 @@ const int FAKTOR_WERTE[4][16]={
 
 bool bI[4][16];
 bool bHitDetected = false;
-const int iHitPause = 100;
+const int iHitPause = 300;
 
 /* Variablen */
 // Piezo
