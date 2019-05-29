@@ -2,8 +2,6 @@
 // Ultraschall
 const int trigPin = 9;
 const int echoPin = 10;
-// Piezo
-const int piezoPin = A0;
 // Button
 const int buttonPin = 2;
 const int buttonLedPin = 4;
@@ -122,7 +120,7 @@ void loop() {
 	// In dieser Zeit sollte das Python Script die Misses mit nullen auffüllen
 	// Dann muss der Button nochmals gedrückt werden, damit der nächste Spieler dran ist
 	if (buttonState == LOW) {
-		Serial.println("DANEBEN");
+		Serial.println("KNOPF");
 		digitalWrite(buttonLedPin, LOW);
 		delay(500);
 		digitalWrite(buttonLedPin, HIGH);
@@ -245,22 +243,5 @@ void loop() {
 				bI[2][10] = 1;
 			}
 		}
-	}
-
-	/* Piezo */
-	// Eingangswert an A0 lesen
-	wert = analogRead(piezoPin);
-	// Wenn Wert größer Schwellwert - dann Aktion
-	if (wert >= schwelle) {
-		// Wenn Wurf erkannt wurde passiert nichts
-		if (bHitDetected) {
-			// Nichts
-		// Andernfalls ist es ein Fehlwurf
-		} else {
-			// Bislang nur Ausgabe
-			Serial.println("FEHLWURF");
-		}
-		// Der Piezo braucht einige Zeit, um sich wieder zu beruhigen, daher 200ms warten.
-		delay(200);
 	}
 }
