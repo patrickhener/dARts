@@ -6,6 +6,10 @@ import time
 import yaml
 import urllib.request
 import urllib.parse
+import sys
+
+# Tracebacks unterdrücken
+sys.tracebacklimit = 0
 
 # Serielle Konfiguration
 ser = serial.Serial()
@@ -128,8 +132,7 @@ def get_wurfzaehler():
         print("Kein Spiel gestartet.")
 
 
-# Main Loop bis CTRL+X
-if __name__ == "__main__":
+def main():
     try:
         while 1:
             string = ser.readline()
@@ -179,3 +182,8 @@ if __name__ == "__main__":
         ser.close()
         print("Serielle Verbindung geschlossen.")
         print("ENDE")
+
+
+# Main Loop bis CTRL+C
+if __name__ == "__main__":
+    main()
