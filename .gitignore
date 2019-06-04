@@ -3,4 +3,4 @@ bin/
 build-mega-atmega2560/
 __pychache__/
 *.log
-config.yml
+python/config.yml
