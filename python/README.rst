@@ -3,6 +3,7 @@ Koppler verwenden
 
 Dieser Koppler überträgt alles, was er vom Arduino bekommt an den Dart-O-Mat 3000.  
 Dazu muss man in der config.yml den Host und den Port auf dem der Dart-O-Mat 3000 erreichbar ist angeben.  
+Es gibt eine config.yaml.sample, die einfach in config.yaml umbenannt und angepasst werden kann.  
 Außerdem wird die serielle Schnittstelle benötigt unter der der Arduino erreichbar ist.  
 
 Dies sollte standardmäßig */dev/ttyACM0* sein.  
