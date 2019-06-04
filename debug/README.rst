@@ -27,15 +27,15 @@ debug-input.py
 Hat man das Debugging gestartet kann man nun via Script *debug-input.py* menügeführt Befehle an das gestartete *dARts.py* senden. Hierbei empfängt *dARts.py*
 die Befehle so, als ob der Arduino (die Hardware) die Befehle senden würde.
 
-```
-------------------------------MENU------------------------------
-1:       Knopf wurde gedrückt
-2:       Fehlwurferkennung durch Piezo
-3:       Pfeilrückholung wird erkannt
-CTRL+C:  Exit
--------
-Wurfwert (Beispiel 312 für T12) oder [1-3 aus Menü]:
-```
+.. code-block:: bash
+
+    ------------------------------MENU------------------------------
+    1:       Knopf wurde gedrückt
+    2:       Fehlwurferkennung durch Piezo
+    3:       Pfeilrückholung wird erkannt
+    CTRL+C:  Exit
+    -------
+    Wurfwert (Beispiel 312 für T12) oder [1-3 aus Menü]:
 
 1: Knopf
 --------

@@ -34,8 +34,8 @@ Die dARts.service ist eine systemd Service file:
 
     [Service]
     Type=simple
-    WorkingDirectory=/home/patrick/arduino-prj/dARts/python
-    ExecStart=/usr/bin/python3 /home/patrick/arduino-prj/dARts/python/dARts.py
+    WorkingDirectory=/home/patrick/projects/dARts/python
+    ExecStart=/usr/bin/python3 /home/patrick/projects/dARts/python/dARts.py
 
     [Install]
     WantedBy=multi-user.target
