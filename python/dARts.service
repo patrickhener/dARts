@@ -1,0 +1,11 @@
+[Unit]
+Description=dARts.py E-Dart Kopplungs service
+After=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/patrick/arduino-prj/dARts/python
+ExecStart=/usr/bin/python3 /home/patrick/arduino-prj/dARts/python/dARts.py
+
+[Install]
+WantedBy=multi-user.target
