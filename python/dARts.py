@@ -17,7 +17,7 @@ import signal
 # Setup Logging
 #  if os.path.isfile("dARts.log"):
     #  os.remove("dARts.log")
-logging.basicConfig(filename='dARts.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename='dARts.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 logging.info("Start der Applikation")
 
 #  systemd stuff
@@ -129,9 +129,16 @@ matrix_dict = {
 }
 
 valide_wurfzaehler = ["0", "1", "2", "3"]
-global pfeile_holen
-pfeile_holen = False
 
+global pfeile_holen
+global knopf_an
+global pfeile_abgezogen
+global won
+
+pfeile_holen = False
+knopf_an = False
+pfeile_abgezogen = True
+won = False
 
 # Funktionen
 def makeRequest(urlpart):
@@ -141,10 +148,31 @@ def makeRequest(urlpart):
         response_text = response.read().decode('utf-8')
         if "Dart" in response_text:
             set_pfeile_holen(True)
+            button_on()
+        if "Sieger" in response_text:
+            set_won(True)
+            button_on()
+        if "Winner" in response_text:
+            set_won(True)
+            button_on()
         logging.info("SCOREBOARDANTWORT: {}".format(response_text))
         return response_text
     except:
         logging.error("Fehler bei der Scoreboard Anfrage")
+
+
+def requestRematch():
+    try:
+        url = host + ":" + port + "/game/rematch"
+        response = urllib.request.urlopen(url)
+        response_text = response.read().decode('utf-8')
+        logging.info("SCOREBOARDANTWORT: {}".format(response_text))
+        button_off()
+        set_won(False)
+        return response_text
+    except:
+        logging.error("Fehler bei der Rematch Anfrage")
+
 
 def nextPlayer():
     try:
@@ -153,6 +181,7 @@ def nextPlayer():
         response_text = response.read().decode('utf-8')
         if "Dart" in response_text:
             set_pfeile_holen(True)
+            button_on()
         logging.info("SCOREBOARDANTWORT: {}".format(response_text))
         return response_text
     except:
@@ -164,9 +193,39 @@ def get_wurfzaehler():
         url = host + ":" + port + "/game/getThrowcount"
         response = urllib.request.urlopen(url)
         response_text = response.read().decode('utf-8')
+        global pfeile_holen
+        if not pfeile_holen:
+            check_button_on(response_text)
         return response_text
     except:
         logging.error("Kein Spiel gestartet")
+
+
+def check_button_on(wurfzaehler):
+    try:
+        global knopf_an
+        if wurfzaehler == "2":
+            if not knopf_an:
+                button_on()
+        else:
+            if knopf_an:
+                button_off()
+    except:
+        logging.error("Button Check fehlgeschlagen")
+
+
+def button_on():
+    global knopf_an
+    outputString = "BUTTONAN\n"
+    ser.write(outputString.encode('utf-8'))
+    knopf_an = True
+
+
+def button_off():
+    global knopf_an
+    outputString = "BUTTONAUS\n"
+    ser.write(outputString.encode('utf-8'))
+    knopf_an = False
 
 
 def read_serial():
@@ -190,6 +249,28 @@ def set_pfeile_holen(status):
     return get_pfeile_holen
 
 
+def get_pfeile_abgezogen():
+    global pfeile_abgezogen
+    return pfeile_abgezogen
+
+
+def set_pfeile_abgezogen(status):
+    global pfeile_abgezogen
+    pfeile_abgezogen = status
+    return get_pfeile_abgezogen
+
+
+def get_won():
+    global won
+    return won
+
+
+def set_won(status):
+    global won
+    won = status
+    return won
+
+
 def init():
     if get_wurfzaehler() == "3":
         set_pfeile_holen(True)
@@ -204,25 +285,34 @@ def main():
                 wurfzaehler = get_wurfzaehler()
                 if not get_pfeile_holen():
                     if not wurfzaehler == "3":
-                        antwort = makeRequest(matrix_dict[string])
+                        if get_pfeile_abgezogen():
+                            antwort = makeRequest(matrix_dict[string])
 
             elif string == "FEHLWURF":
                 wurfzaehler = get_wurfzaehler()
                 if not get_pfeile_holen():
                     if not wurfzaehler == "3":
-                        antwort = makeRequest('/0/1')
+                        if get_pfeile_abgezogen():
+                            antwort = makeRequest('/0/1')
 
             elif string == "KNOPF":
-                wurfzaehler = get_wurfzaehler()
-                if wurfzaehler in valide_wurfzaehler:
-                    if not get_pfeile_holen():
-                        while not wurfzaehler == "3":
-                            antwort = makeRequest('/0/1')
-                            wurfzaehler = get_wurfzaehler()
-                        time.sleep(int(pfeilzeit))
-                    else:
-                        antwort = nextPlayer()
-                        set_pfeile_holen(False)
+                if get_won():
+                    requestRematch()
+                else:
+                    wurfzaehler = get_wurfzaehler()
+                    if wurfzaehler in valide_wurfzaehler:
+                        if not get_pfeile_holen():
+                            while not wurfzaehler == "3":
+                                antwort = makeRequest('/0/1')
+                                wurfzaehler = get_wurfzaehler()
+                                button_on()
+                            set_pfeile_abgezogen(False)
+
+                        else:
+                            antwort = nextPlayer()
+                            set_pfeile_holen(False)
+                            set_pfeile_abgezogen(True)
+                            button_off()
 
             elif string == "PFEILE":
                 wurfzaehler = get_wurfzaehler()
@@ -230,6 +320,8 @@ def main():
                     time.sleep(int(pfeilzeit))
                     antwort = nextPlayer()
                     set_pfeile_holen(False)
+                    set_pfeile_abgezogen(True)
+                    button_off()
                 else:
                     logging.error("Das sollte niemals angezeigt werden")
 
