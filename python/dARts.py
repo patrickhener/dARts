@@ -10,6 +10,7 @@ import sys
 import logging
 import os
 import signal
+import datetime
 
 # Tracebacks unterdrücken
 #  sys.tracebacklimit = 0
@@ -134,11 +135,17 @@ global pfeile_holen
 global knopf_an
 global pfeile_abgezogen
 global won
+global last_throw
+global last_hit_time
+global stuck_threshold
 
 pfeile_holen = False
 knopf_an = False
 pfeile_abgezogen = True
 won = False
+last_throw = "0"
+last_hit_time = None
+stuck_threshold = datetime.timedelta(0,0,500000)
 
 # Funktionen
 def makeRequest(urlpart):
@@ -172,6 +179,18 @@ def requestRematch():
         return response_text
     except:
         logging.error("Fehler bei der Rematch Anfrage")
+
+
+def requestStuck():
+    try:
+        url = host + ":" + port + "/game/stuck"
+        response = urllib.request.urlopen(url)
+        response_text = response.read().decode('utf-8')
+        logging.info("SCOREBOARDANTWORT: {}".format(response_text))
+        button_blinken()
+        return response_text
+    except:
+        logging.error("Fehler bei der Stuck Anfrage")
 
 
 def nextPlayer():
@@ -246,7 +265,7 @@ def get_pfeile_holen():
 def set_pfeile_holen(status):
     global pfeile_holen
     pfeile_holen = status
-    return get_pfeile_holen
+    return get_pfeile_holen()
 
 
 def get_pfeile_abgezogen():
@@ -257,7 +276,7 @@ def get_pfeile_abgezogen():
 def set_pfeile_abgezogen(status):
     global pfeile_abgezogen
     pfeile_abgezogen = status
-    return get_pfeile_abgezogen
+    return get_pfeile_abgezogen()
 
 
 def get_won():
@@ -268,25 +287,63 @@ def get_won():
 def set_won(status):
     global won
     won = status
-    return won
+    return get_won()
 
 
-def init():
-    if get_wurfzaehler() == "3":
-        set_pfeile_holen(True)
+def get_last_throw():
+    global last_throw
+    return last_throw
+
+
+def set_last_throw(string):
+    global last_throw
+    last_throw = string
+    return get_last_throw()
+
+
+def get_last_hit_time():
+    global last_hit_time
+    return last_hit_time
+
+
+def set_last_hit_time(time):
+    global last_hit_time
+    last_hit_time = time
+    return get_last_hit_time()
+
 
 def main():
-    init()
+    if get_wurfzaehler() == "3":
+        set_pfeile_holen(True)
+        set_pfeile_abgezogen(False)
+        button_on()
+
     while True:
         string = read_serial()
         if string:
+            current_time = datetime.datetime.now()
             logging.info("string ist: {}".format(string))
             if string in matrix_dict:
                 wurfzaehler = get_wurfzaehler()
                 if not get_pfeile_holen():
                     if not wurfzaehler == "3":
                         if get_pfeile_abgezogen():
-                            antwort = makeRequest(matrix_dict[string])
+                            if string == get_last_throw():
+                                # Zeit prüfen
+                                global stuck_threshold
+                                if (current_time - get_last_hit_time()) < stuck_threshold:
+                                    logging.error("Dart steckt fest")
+                                    antwort = requestStuck()
+                                else:
+                                    antwort = makeRequest(matrix_dict[string])
+
+                                set_last_hit_time(datetime.datetime.now())
+
+                            else:
+                                antwort = makeRequest(matrix_dict[string])
+                                set_last_hit_time(datetime.datetime.now())
+
+                            set_last_throw(string)
 
             elif string == "FEHLWURF":
                 wurfzaehler = get_wurfzaehler()
@@ -297,7 +354,7 @@ def main():
 
             elif string == "KNOPF":
                 if get_won():
-                    requestRematch()
+                    antwort = requestRematch()
                 else:
                     wurfzaehler = get_wurfzaehler()
                     if wurfzaehler in valide_wurfzaehler:

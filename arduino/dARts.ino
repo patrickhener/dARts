@@ -1,4 +1,6 @@
-/* Pins definieren */
+/***********************/
+/*        PINS         */
+/***********************/
 // Ultraschall
 const int trigPin = 9;
 const int echoPin = 10;
@@ -14,6 +16,9 @@ const int PO_[4] = { 46, 48, 25, 23 };
 // Input Pins
 const int PI_[16] = { 50, 52, 53, 51, 49, 47, 45, 43, 41, 39, 37, 35, 33, 31, 29, 27 };
 
+/***********************/
+/*        VARIABLEN    */
+/***********************/
 // Matrix Werte
 // 120 = single 20, 220 = double 20, 320 = triple 20
 // 125 = single Bull, 225 = doppel bull
@@ -29,8 +34,8 @@ const int FAKTOR_WERTE[4][16]={
 bool bI[4][16];
 bool bHitDetected = false;
 const int iHitPause = 300;
+unsigned int iLastThrow = 0;
 
-/* Variablen */
 // Piezo
 int wert[2] = { 0, 0 };
 int schwelle = 200;
@@ -41,11 +46,13 @@ int buttonState = 0;
 long duration;
 int distance;
 int ultraschwelle = 10;
-/* Input String von PI zu Arduino */
+// Input String von PI zu Arduino
 String inputString = "";
 boolean stringComplete = false;
 
-/* Funktionen */
+/***********************/
+/*       FUNKTIONEN    */
+/***********************/
 void Ultraschall() {
 	/* Ultraschall */
 	// trigPin frei machen
@@ -71,13 +78,21 @@ void checkButton() {
 	/* Button */
 	// Button einlesen
 	buttonState = digitalRead(buttonPin);
-	// Wenn Button gedrückt, dann Schreibe DANEBEN und lass den Button blinken
-	// In dieser Zeit sollte das Python Script die Misses mit nullen auffüllen
-	// Dann muss der Button nochmals gedrückt werden, damit der nächste Spieler dran ist
+	// Wenn gedrückt Ausgabe
 	if (buttonState == LOW) {
 		Serial.println("KNOPF");
 		delay(100);
 	}
+}
+
+
+void WurfSchicken(int x, int y) {
+	Serial.println(FAKTOR_WERTE[x][y]);
+	delay(iHitPause);
+	bHitDetected = true;
+	// Zur Sicherheit - Bulls auf NULL
+	bI[1][10] = 1;
+	bI[2][10] = 1;
 }
 
 void WurfAuswerten() {
@@ -94,26 +109,9 @@ void WurfAuswerten() {
 
 		for (int y=0; y<16; y++) {
 			bI[x][y]  = digitalRead(PI_[y]);
-			// Wenn getroffen Wert ausgeben
+			// Wenn getroffen dann
 			if (bI[x][y] == 0) {
-				Serial.println(FAKTOR_WERTE[x][y]);
-				delay(iHitPause);
-				bHitDetected = true;
-				// Zur Sicherheit - Bulls auf NULL
-				bI[1][10] = 1;
-				bI[2][10] = 1;
-			}
-		}
-	}
-
-	// Prüfen ob im Array etwas getroffen wurde
-	// Wenn ja Wert ausgeben
-	for (int x=3; x>=0; x--)
-	{
-		for (int y=0; y<16; y++)
-		{
-			if (bI[x][y] == 0)
-			{
+				WurfSchicken(x, y);
 			}
 		}
 	}
@@ -140,6 +138,7 @@ void FehlwurfErkennen() {
 		if (bFehlwurf) {
 			// Bislang nur Ausgabe
 			Serial.println("FEHLWURF");
+			delay(200);
 		}
 	}
 }
@@ -154,6 +153,19 @@ void ReagiereAufSerialString() {
 	stringComplete = false;
 }
 
+
+void Blinken(int Anzahl) {
+	for (int i=0; i<Anzahl; i++) {
+		digitalWrite(buttonLedPin, HIGH);
+		delay(250);
+		digitalWrite(buttonLedPin, LOW);
+		delay(250);
+	}
+}
+
+/***********************/
+/* Die einzelnen Loops */
+/***********************/
 
 /* Setup loop */
 void setup() {
@@ -175,12 +187,7 @@ void setup() {
 	}
 
 	// Button blinken lassen
-	for (int i=0; i<3; i++) {
-		digitalWrite(buttonLedPin, HIGH);
-		delay(250);
-		digitalWrite(buttonLedPin, LOW);
-		delay(250);
-	}
+	Blinken(3);
 	// Beginne serielle Übertragung an PC
 	Serial.begin(115200);
 }
