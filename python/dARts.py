@@ -51,7 +51,7 @@ if cfg:
     # Serielle Konfiguration
     ser = serial.Serial()
     ser.port = serialport
-    ser.baudrate = 9600
+    ser.baudrate = 115200
     ser.timeout = 1
 
 # Port öffnen

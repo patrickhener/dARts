@@ -7,7 +7,7 @@ from os import system
 
 # Serial setup
 ser = serial.Serial()
-ser.baudrate = 9600
+ser.baudrate = 115200
 ser.port = '/tmp/virtualcom1'
 
 # Port öffnen
