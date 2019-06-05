@@ -187,7 +187,10 @@ def requestStuck():
         response = urllib.request.urlopen(url)
         response_text = response.read().decode('utf-8')
         logging.info("SCOREBOARDANTWORT: {}".format(response_text))
-        button_blinken()
+        button_on()
+        time.sleep(.25)
+        button_off()
+        time.sleep(.25)
         return response_text
     except:
         logging.error("Fehler bei der Stuck Anfrage")
@@ -235,16 +238,21 @@ def check_button_on(wurfzaehler):
 
 def button_on():
     global knopf_an
-    outputString = "BUTTONAN\n"
+    outputString = "BAN\n"
     ser.write(outputString.encode('utf-8'))
     knopf_an = True
 
 
 def button_off():
     global knopf_an
-    outputString = "BUTTONAUS\n"
+    outputString = "BAUS\n"
     ser.write(outputString.encode('utf-8'))
     knopf_an = False
+
+
+def button_blinken():
+    button_on()
+    button_off()
 
 
 def read_serial():

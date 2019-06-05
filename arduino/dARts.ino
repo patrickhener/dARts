@@ -143,17 +143,6 @@ void FehlwurfErkennen() {
 	}
 }
 
-void ReagiereAufSerialString() {
-	if ( inputString.indexOf("BUTTONAN") != -1) {
-		digitalWrite(buttonLedPin, HIGH);
-	} else if (inputString.indexOf("BUTTONAUS") != -1) {
-		digitalWrite(buttonLedPin, LOW);
-	}
-	inputString = "";
-	stringComplete = false;
-}
-
-
 void Blinken(int Anzahl) {
 	for (int i=0; i<Anzahl; i++) {
 		digitalWrite(buttonLedPin, HIGH);
@@ -161,6 +150,18 @@ void Blinken(int Anzahl) {
 		digitalWrite(buttonLedPin, LOW);
 		delay(250);
 	}
+}
+
+void ReagiereAufSerialString() {
+	if ( inputString.indexOf("BAN") != -1) {
+		digitalWrite(buttonLedPin, HIGH);
+	} else if (inputString.indexOf("BAUS") != -1) {
+		digitalWrite(buttonLedPin, LOW);
+	} else if (inputString.indexOf("BB") != -1) {
+		Blinken(1);
+	}
+	inputString = "";
+	stringComplete = false;
 }
 
 /***********************/
