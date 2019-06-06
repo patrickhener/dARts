@@ -12,9 +12,9 @@ const int buttonLedPin = 3;
 
 // Matrix
 // Output Pins
-const int PO_[4] = { 46, 48, 25, 23 };
+const int PO_[4] = { 22, 24, 49, 47 };
 // Input Pins
-const int PI_[16] = { 50, 52, 53, 51, 49, 47, 45, 43, 41, 39, 37, 35, 33, 31, 29, 27 };
+const int PI_[16] = { 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 53, 51 };
 
 /***********************/
 /*        VARIABLEN    */
