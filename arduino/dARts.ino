@@ -2,8 +2,8 @@
 /*        PINS         */
 /***********************/
 // Ultraschall
-const int trigPin = 8;
-const int echoPin = 9;
+const int echoPin = 8;
+const int trigPin = 9;
 // Piezo
 const int piezoPin[2] = { A0, A1 };
 // Button
