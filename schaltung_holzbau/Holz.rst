@@ -1,7 +1,7 @@
 Einkaufsliste Holz mit Vermaßung
 ================================
 
-Ich habe einen Bauplan entworfen, der sich stark an <a href="https://www.youtube.com/watch?v=mV_-dOnWDoY">Strappis Youtube Video</a>
+Ich habe einen Bauplan entworfen, der sich stark an |Video|.
 orientiert. Die nachfolgenden Maße an Holz haben für mich gut funktioniert:
 
 MDF
@@ -17,3 +17,7 @@ Sperrholz/Multiplex
 * Rückwand: 60x75xTODO
 * 3x Stirnbretter: 20x75xTODO
 * Blendbretter: TODO
+
+.. |Video| raw:: html
+
+    <a href="https://www.youtube.com/watch?v=mV_-dOnWDoY">Strappis Youtube Video</a>
