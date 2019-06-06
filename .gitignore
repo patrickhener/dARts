@@ -1,4 +1,5 @@
 !*.bak
+!*.zip
 bin/
 build-mega-atmega2560/
 __pychache__/
