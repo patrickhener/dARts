@@ -1,8 +1,7 @@
 Einkaufsliste Holz mit Vermaßung
 ================================
 
-Ich habe einen Bauplan entworfen, der sich stark an |Video|.
-orientiert. Die nachfolgenden Maße an Holz haben für mich gut funktioniert:
+Ich habe einen Bauplan entworfen, der sich stark an |Video| orientiert. Die nachfolgenden Maße an Holz haben für mich gut funktioniert:
 
 MDF
 ---
