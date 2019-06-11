@@ -44,5 +44,7 @@ Als erstes wird der äußerde Durchmesser der Spinne für 2mm versenkt (eingelas
 
 Nun kann die Spinne durch das Loch gesteckt werden, ausgerichtet werden und mit Schrauben fixiert werden. Sie schließt plan ab und kann so nachher auf das Matrixbrett geschraubt werden.
 
+Abschließend werden noch die Catchsegmente von der Hinterseite verschraubt und fertig ist die Konstruktion des Segmentbretts.
 
-
+.. figure:: Bilder/09a_Catchringe_montieren.JPG
+.. figure:: Bilder/09b_Catchringe_montieren.JPG
