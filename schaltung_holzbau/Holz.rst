@@ -6,16 +6,21 @@ Ich habe einen Bauplan entworfen, der sich stark an |Video| orientiert. Die nach
 MDF
 ---
 
-* Segmentbrett: 48x52xTODO
+* Segmentbrett: 480mm x 520mm x 12mm
 
 Sperrholz/Multiplex
 -------------------
 
-* Matrixbrett: 52x52xTODO
-* Türe: 60x75xTODO
-* Rückwand: 60x75xTODO
-* 3x Stirnbretter: 20x75xTODO
-* Blendbretter: TODO
+* Matrixbrett: 520mm x 520mm x 18mm
+* Türe: 600mm x 750mm x 12mm
+* Rückwand: 600mm x 750mm x 12mm
+* 3x Stirnbretter: 750mm x 200mm x 12mm
+
+Profilleisten
+-------------
+
+* 45° Leiste für LEDs: 750mm + 750mm + 600mm
+* Aufsteckrahmen Leiste als Blende: 750mm + 750mm + 600mm
 
 .. |Video| raw:: html
 
