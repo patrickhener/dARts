@@ -48,3 +48,37 @@ Abschließend werden noch die Catchsegmente von der Hinterseite verschraubt und 
 
 .. figure:: Bilder/09a_Catchringe_montieren.JPG
 .. figure:: Bilder/09b_Catchringe_montieren.JPG
+
+Schritt 2: Matrixbrett
+----------------------
+
+Das Matrixbrett besteht aus Sperrholz Multiplex und ist 520mm auf 520mm und 18mm stark.
+
+.. figure:: Bilder/10_Matrixbrett.JPG
+
+  Brett für die Matrix (520mm x 520mm x 18mm)
+
+Durch Einmessen der Mitte und Zeichnen eines Kreuzes zur Markierung der Mitte ist es möglich die Matrix auszurichten. Die Matrix selbst ist trotz Trägerpapier etwas durchscheinend. Zur Orientierung kann man auch die Druckpunkte der Matrix verwenden. Wichtig ist, dass die Matrix perfekt mittig aufgebracht wird.
+
+.. figure:: Bilder/11_Matrix_mittig_fixieren.JPG
+
+  Matrix ist mittig auf dem Brett fixiert
+
+Wichtig ist es die selbstklebende Matrix noch nicht aufzukleben. Zuerst fixieren wir sie mit Klebeband, setzen das Segmentbrett (mit ein paar eingelegten Segmenten) oben auf und testen, ob bei der aktuellen Positionierung alle Felder korrekt erkannt werden.
+
+Ist das der Fall kann man die Matrix mit einem Edding oder Bleistift umranden, das Trägerpapier auf der Rückseite entfernen und dann die Matrix auf das Brett aufkleben und glatt streichen. Achtung, die Positionierung muss genau eingehalten werden!
+
+Anschließend kann man das Segmentbrett wieder oben auflegen und mit 4 Schrauben auf das Matrixbrett fixieren.
+
+.. figure:: Bilder/12_Einheit_zusammensetzen_testen.JPG
+
+  Fertige Einheit
+
+Es ist darauf zu achten, dass die Schraubenpositionen so gewählt werden, dass die Matrix nicht durchbohrt wird.
+
+Schritt 3: Rückwand und Position der Einheit
+--------------------------------------------
+
+Die Rückwand besteht aus Sperrholz Multiplex und ist 750mm auf 600mm und 12mm stark.
+
+
