@@ -81,4 +81,24 @@ Schritt 3: Rückwand und Position der Einheit
 
 Die Rückwand besteht aus Sperrholz Multiplex und ist 750mm auf 600mm und 12mm stark.
 
+Auf der Rückwand kann nun mit einem Rahmen die genaue Position der Einheit ermittelt werden. Unten muss Platz für die Technik bleiben und die Einheit sollte mittig sitzen.
+
+
+.. figure:: Bilder/13_Einheit_auf-Rueckplatte_ausrichten.JPG
+
+  Fertige Einheit sitzt passgenau auf der Rückwand
+
+Dann bohrt man durch den Überstand der Matrixplatte und die Rückwand je 1 Loch in jeder Ecke. Dort habe ich bei diesem Automaten dann Gewindeschrauben eingeklebt um die fertige Einheit auf der Rückwand mit Gewindehülsen befestigen zu können.
+
+.. figure:: Bilder/14_Schrauben_einkleben.JPG
+
+  Einkleben der Schrauben von der Rückseite aus
+
+.. figure:: Bilder/15_Schrauben_drin.JPG
+
+  Schrauben sind fertig für die Einheit
+
+.. figure:: Bilder/16_Mit_Huelsen_befestigen.JPG
+
+  Einheit wird mit Hülsen auf der Rückwand befestigt
 
