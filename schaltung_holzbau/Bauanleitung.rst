@@ -102,3 +102,73 @@ Dann bohrt man durch den Überstand der Matrixplatte und die Rückwand je 1 Loch
 
   Einheit wird mit Hülsen auf der Rückwand befestigt
 
+Schritt 4: Türe
+---------------
+
+Die Türe besteht aus Sperrholz Multiplex und ist 750mm auf 600mm und 12mm stark.
+
+Die Türe bekommt den gleichen Rahmen eingezeichnet, wie die Rückwand, sodass die Umrisse der fertigen Einheit auch auf der Türe zu sehen sind. Nun kann man die Mitte des Rahmens und somit die Mitte der Scheibe ermitteln.
+
+.. figure:: Bilder/17_Tuerfraesung_einmessen.JPG
+
+  Mittelbohrung für Fräszirkel in der Türe
+
+Anschließend kann man mit dem Fräszirkel ein Loch in die Türe für die Scheibe machen. Hierbei sollte darauf geachtet werden, dass der Radius so gewählt wird, dass etwa 1,5mm Luft ist, um anschließend noch den Kantenschutz einbringen zu können.
+
+.. figure:: Bilder/18_Tuerloch_fraesen.JPG
+
+  Türloch wird eingefräst
+
+Anschließend kann man die Türe für eine Passprobe auf das Werkstück legen.
+
+.. figure:: Bilder/19_Fertige_tuere_mit_Kantenschutz.JPG
+
+  Türe passt mit Kantenschutz
+
+Abschließend wird noch ein Loch für den Knopf eingelassen.
+
+.. figure:: Bilder/21_Knopf_in_Tuere_einlassen.JPG
+
+  Knopf in Türe
+
+Schritt 5: Montage Seitenwände
+------------------------------
+
+Die Seitenwände bestehen aus Sperrholz Multiplex und sind 750mm auf 200mm und 12mm stark.
+
+Die Seitenwände werden auf die Stirnseiten der Rückplatte befestigt. Zuerst die Seiten dann das Oberteil. Unten wird vorerst keine Platte befestigt.
+
+Hierbei ist es wichtig alle Schraubenlöche vorzubohren. Die Köpfe der Schrauben können auch versenkt werden. So sieht der fertige Automat nachher noch besser aus.
+
+.. figure:: Bilder/20_Seitenteile_befestigen.JPG
+
+  Seitenteil wird befestigt
+
+Schritt 6: Streichen
+--------------------
+
+Als nächsten Schritt habe ich die Teile gestrichen. Dazu verwende ich einen matten, schwarzen Lack, den ich mit einer Lackierwalze (glatt und aus Schaumstoff) aufgebracht habe. Nach einer Schicht kommt noch leicht die Maserung des Holz durch, was ich ziemlich schön finde. Für ein deckendes Ergebnis muss man das Holz eher zweimal streichen. Man sollte hierbei unbedingt die Trocknungszeit beachten.
+
+.. figure:: Bilder/22a_Streichen.JPG
+
+  Türe schwarz gestrichen
+
+.. figure:: Bilder/22b_Streichen.JPG
+
+  Kasten schwarz gestrichen
+
+Schritt 7: Trocknungszeit nutzen, Einheit bestücken
+---------------------------------------------------
+
+Während der Kasten und die Türe trocknen kann man die Einheit bestücken.
+
+.. figure:: Bilder/23_Bestueckung_Segmente.JPG
+
+  Fertig bestückte Spinne
+
+Dazu muss man die Einheit zuvor erneut zerlegen und dann die Segmente korrekt einsetzen. Ich habe dann noch zwei Piezo Sensoren hinter dem Catchring auf der Rückseite des Segmentbretts mit Klebeband fixiert und die Kabelzuleitungen seitlich heraushängen lassen.
+
+.. figure:: Bilder/24_Piezo_Sensor.JPG
+
+  Kabelzuleitung Piezosensor
+
