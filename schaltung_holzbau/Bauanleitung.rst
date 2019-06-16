@@ -285,7 +285,7 @@ Nun ist Geduld und ein gutes Auge gefragt. Abschließend hat man es geschafft un
 
   Fast geschafft!!
 
-.. figure:: Bilder/29_Tuere_passt.JPG
+.. figure:: Bilder/39_Zahlen_fertig.JPG
 
   Alle Zahlen sind aufgeklebt und LEDs funktionieren
 
