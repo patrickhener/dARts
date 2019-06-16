@@ -172,3 +172,140 @@ Dazu muss man die Einheit zuvor erneut zerlegen und dann die Segmente korrekt ei
 
   Kabelzuleitung Piezosensor
 
+Schritt 8: Technik - Stecker, Kabel, Arduino, Pi
+------------------------------------------------
+
+Ich habe mich entschieden Jumperkabel zu nehmen und eine Seite mit Schrumpfschlauch zu Steckern zu schrumpfen. Diese Stecker können später einfach auf der individuellen Platine aufgesteckt werden.
+
+.. figure:: Bilder/25_Stecker.JPG
+
+  Jumperkabel wurden zu Steckern gefertigt
+
+Die Technik habe ich an der richtigen Stelle angezeichnet. Dann habe ich von hinten Abstandshalter verschraubt, auf der die Technik fixiert werden kann. So sitzen Arduino und Pi anschließend sicher im Gehäuse.
+
+.. figure:: Bilder/26_Technik.JPG
+
+  Arduino und PI sitzen sicher im Gehäuse
+
+Abschließend kann auch die Einheit wieder eingesetzt werden, sodass man die Kabelführung besser planen kann.
+
+.. figure:: Bilder/27_Einheit_eingebaut.JPG
+
+  Die Einheit ist wieder auf der Rückplatte befestigt
+
+Schritt 9: Kabel verlegen
+-------------------------
+
+Jetzt können die Kabel verlegt werden und die Stecker in Position gebracht werden.
+
+Hierbei habe ich den Ultraschallsensor von oben angebracht (durchgebohrt) und die Kabel über die Oberseite unsichtbar verlegt.
+Außerdem habe ich die Kabelstrecken immer wieder mit Klebeband vor dem Verrutschen fixiert.
+
+.. figure:: Bilder/28a_Kabel.JPG
+
+.. figure:: Bilder/28b_Kabel.JPG
+
+.. figure:: Bilder/28c_Kabel.JPG
+
+.. figure:: Bilder/28d_Ultraschall.JPG
+
+  Ultraschall Sensor ist in Position
+
+Schritt 10: Türe inklusive Verriegelung
+---------------------------------------
+
+In das Loch in der Türe wird der Kantenschutz mit einem Tacker eingebracht. Ich musste dazu noch die Führungsnut des Kantenschutzes mit einem Messer abschneiden.
+
+Dann kann erneut geprüft werden, ob die Türe passt. Durch die Lackierung und das zu genaue Arbeiten war ich gezwungen die Türe nochmals an den Seiten und unten abzuschleifen, damit sie passt.
+
+.. figure:: Bilder/29_Tuere_passt.JPG
+
+Nun habe ich von oben und einmal seitlich ein kleines Loch gebohrt, in das ein Nagel gesteckt werden kann. Dann wird die Türe vor dem Verrutschen gesichert. Im vierten Eck wird das Schloss eingebaut und verriegelt die Türe. Außerdem dient es zum Ausziehen der Türe für Wartungsarbeiten. Hier muss genau gearbeitet werden.
+
+.. figure:: Bilder/30_Nagel_in_der_Decke.JPG
+
+  Nagel von Oben durch die Decke in die Türe
+
+.. figure:: Bilder/31_Schloss_in_der_Ecke.JPG
+
+  Schloss unten links in der Türe
+
+Schritt 11: Blenden herstellen und leimen
+-----------------------------------------
+
+Die Stirnblenden habe ich aus Winkelholz geschnitten. Es hat die Maße 30mm x 30mm und ist 5mm dick. Ich habe die Blenden ebenfalls schwarz gestrichen und auf Gehrung geschnitten und eingepasst.
+
+Anschließend werden die Leisten an die Seiten geleimt. Unter den Blenden werden später die LEDs angebracht.
+
+.. figure:: Bilder/32_Blenden_leimen.JPG
+
+  Blenden sind geleimt und mit Schraubzwingen fixiert
+
+.. figure:: Bilder/33_Blenden_fertig.JPG
+
+  Die Blenden sind fertig
+
+Schritt 12: Netzteil und LEDs
+-----------------------------
+
+Die LEDs für unter die Blenden habe ich vorab abgelängt und mit ausreichend langen Kabeln versehen.
+
+Die LEDs habe ich dann unter den Blenden aufgeklebt. Ich habe zusätzlich Holzleim verwendet, da mit solche LED Bänder meist abgefallen sind. Ich habe die LEDs außerdem vorübergehend mit Klebeband fixiert.
+
+.. figure:: Bilder/34_LEDs_unter_Leisten_geklebt.JPG
+
+  Die LEDs kleben unter den Blenden
+
+Die gelben und schwarzen Kabel am rechten Kastenrand sind die LED Kabel, die ich ebenfalls über den Deckel verlegt, im Gehäuse zusammengeführt und dann zum Netzteil nach unten verlegt habe.
+
+Das Netzteil hat einen 12V und einen 5V Ausgang und liefert ausreichend Strom für die Technik und die LEDs.
+
+.. figure:: Bilder/35_Netzteil.JPG
+
+  Netzteil ist im Kasten fixiert
+
+Das Stromkabel wird durch ein Loch im Boden nach unten herausgeführt und kann bei Bedarf auch abgenommen und wieder eingesteckt werden.
+
+Am Netzteil sind die LEDs (Gelb/Schwarz) und ein Micro-USB Stecker (Rot/Schwarz) für den Pi angelötet.
+
+Schritt 13: Zahlen aufkleben
+----------------------------
+
+Zuerst werden alle Zahlen, die benötigt werden ausgeschnitten und ausgelegt. Hier gilt es besonders oft zu kontrollieren, ob die Reihenfolge stimmt.
+
+.. figure:: Bilder/36_Zahlen_auslegen.JPG
+
+Dann habe ich eine Schablone gefertigt. Diese wird mittig im Bulls Eye angebracht mithilfe eines Pfeils und zeigt die Mitte des Feldes an. So können die Zahlen besser ausgerichtet werden.
+
+.. figure:: Bilder/37_Schablone_in_aktion.JPG
+
+Nun ist Geduld und ein gutes Auge gefragt. Abschließend hat man es geschafft und alle Zahlen sind aufgeklebt.
+
+.. figure:: Bilder/38_Fast_geschafft.JPG
+
+  Fast geschafft!!
+
+.. figure:: Bilder/29_Tuere_passt.JPG
+
+  Alle Zahlen sind aufgeklebt und LEDs funktionieren
+
+Schritt 14: Platine löten und einbauen
+--------------------------------------
+
+Die Platine habe ich selbst designed und dann online bestellt. Man muss praktisch nur noch Stiftleisten nach unten gerichtet auflöten für die Steckverbindung zum Arduino.
+
+Oben lötet man abgewinkelte Steckleisten auf, für die Steckerverbindungen zu Sensoren, Matrix und Knopf. Außerdem muss man noch zwei 1 MOhm Widerstände für die Piezos einlöten.
+
+Dann kann alles zusammengesteckt werden und die Funktion getestet werden.
+
+Schritt 15: Abschlusstests
+--------------------------
+
+Für den Abschlusstest verwende ich mein Dart-O-Mat 3000 Scoreboard und ein Tablet als Anzeige. Das Scoreboard läuft mit auf dem Pi. Ich habe den Pi so konfiguriert, dass er ein eigenes WLAN ausstrahlt, mit dem man das Tablet zur Anzeige verbinden kann.
+
+Nun müssen alle Funktionen getestet werden (Fehlwurf, Wurferkennung, Knopf, Ultraschallsensor, ...)
+
+Abschließende Bilder
+--------------------
+
+
