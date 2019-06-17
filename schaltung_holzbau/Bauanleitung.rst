@@ -294,6 +294,14 @@ Schritt 14: Platine löten und einbauen
 
 Die Platine habe ich selbst designed und dann online bestellt. Man muss praktisch nur noch Stiftleisten nach unten gerichtet auflöten für die Steckverbindung zum Arduino.
 
+.. figure:: Bilder/40a_Platine.JPG
+
+  Platine ungelötet Vorderseite
+
+.. figure:: Bilder/40b_Platine.JPG
+
+  Platine ungelötet Rückseite
+
 Oben lötet man abgewinkelte Steckleisten auf, für die Steckerverbindungen zu Sensoren, Matrix und Knopf. Außerdem muss man noch zwei 1 MOhm Widerstände für die Piezos einlöten.
 
 Dann kann alles zusammengesteckt werden und die Funktion getestet werden.
