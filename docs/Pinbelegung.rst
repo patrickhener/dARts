@@ -1,3 +1,4 @@
+.. _Pinbelegung:
 .. Tabelle generiert mit http://www.tablesgenerator.com/text_tables#
 
 Pinbelegung

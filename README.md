@@ -17,9 +17,6 @@ Dieses Projekt besteht aus mehreren Ordnern mit unterschiedlichen Inhalten.
 ## arduino
 Hierin sind Beispiel Sketches für den Arduino enthalten
 
-## debug
-Hierin ist ein Modul enthalten mit dem man den Script auch ohne Arduino testen und weiterentwickeln kann.
-
 ## pcb_gerber
 Hierin befindet sich eine Gerber Datei mit einem PCB Design für das Bestellen einer vorgefertigten Leiterplatine.
 

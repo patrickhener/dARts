@@ -1,8 +1,3 @@
-Arduino Sketche
-===============
-
-Dieser Ordner bietet einen Arduino Sketch für einen Arduino Mega 2560.
-
 MAKEFILE
 ========
 
