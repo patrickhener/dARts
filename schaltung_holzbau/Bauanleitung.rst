@@ -304,7 +304,23 @@ Die Platine habe ich selbst designed und dann online bestellt. Man muss praktisc
 
 Oben lötet man abgewinkelte Steckleisten auf, für die Steckerverbindungen zu Sensoren, Matrix und Knopf. Außerdem muss man noch zwei 1 MOhm Widerstände für die Piezos einlöten.
 
+.. figure:: Bilder/41_Platine_front.JPG
+
+  Fertige Platine von oben
+
+.. figure:: Bilder/42_platine_back.JPG
+
+  Fertige Platine von unten
+
+Außerdem habe ich die abgewinkelten Steckleisten in einem Winkel angebracht, sodass die Stecker später besser draufpassen.
+
+.. figure:: Bilder/43_Platine_profil.JPG
+
 Dann kann alles zusammengesteckt werden und die Funktion getestet werden.
+
+.. figure:: Bilder/44_Platine_eingebaut.JPG
+
+  Die Platine ist eingebaut
 
 Schritt 15: Abschlusstests
 --------------------------
