@@ -5,3 +5,7 @@ build-mega-atmega2560/
 __pychache__/
 *.log
 python/config.yml
+/docs/_build
+/docs/_static
+/docs/_templates
+/docs/_themes
