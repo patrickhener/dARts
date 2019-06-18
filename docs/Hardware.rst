@@ -1,5 +1,10 @@
-Hardwareteile
-=============
+Hardware
+========
+
+Nachfolgend wird die Hardware aufgeführt, die zum Bau des Automaten notewendig ist.
+
+Gekauft habe ich
+----------------
 
 Die nachfolgenden Teile sind eine Empfehlung und entsprechen den Teilen, die ich gekauft habe:
 
@@ -12,8 +17,8 @@ Die nachfolgenden Teile sind eine Empfehlung und entsprechen den Teilen, die ich
 * Schloss: |Schloss|
 * Matrix-Schaumstoff: |SS|
 
-Sonstiges
-=========
+Sonstiges hatte ich noch
+------------------------
 
 Was man sonst noch so braucht, habe ich noch rumliegen gehabt:
 
@@ -24,7 +29,7 @@ Was man sonst noch so braucht, habe ich noch rumliegen gehabt:
 * Widerstandsset
 * Schrumpfschlauch
 * Jumper Kabel
-
+* LED Band 12V
 
 .. |Arduino| raw:: html
 

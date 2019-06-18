@@ -25,6 +25,3 @@ Hierin befindet sich eine Gerber Datei mit einem PCB Design für das Bestellen e
 
 ## python
 Hierin enthalten ist der Koppler Script, der den Arduino mit dem Dart-O-Mat 3000 verbindet.
-
-## schaltung_holzbau
-Hierin sind Details zur Verschaltung und zum Bau des Automaten aus Sicht der Holzarbeiten enthalten.

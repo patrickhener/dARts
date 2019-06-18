@@ -15,11 +15,11 @@ Sperrholz/Multiplex
 * Türe: 600mm x 750mm x 12mm
 * Rückwand: 600mm x 750mm x 12mm
 * 3x Stirnbretter: 750mm x 200mm x 12mm
+* Boden: 750mm x 200mm x 12mm
 
 Profilleisten
 -------------
 
-* 45° Leiste für LEDs: 750mm + 750mm + 600mm
 * Aufsteckrahmen Leiste als Blende: 750mm + 750mm + 600mm
 
 .. |Video| raw:: html

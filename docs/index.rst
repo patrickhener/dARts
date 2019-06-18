@@ -14,5 +14,13 @@ Gestützt vom Scoreboard System |Dart-O-Mat 3000|
   <a href="https://github.com/patrickhener/dart-o-mat-3000/" target="_blank">Dart-O-Mat 3000</a>
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
+
+   Hardware.rst
+   Holz.rst
+   Pinbelegung.rst
+   Bauanleitung.rst
+   Arduino.rst
+   Python.rst
+   System.rst
 
