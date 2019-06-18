@@ -1,5 +1,5 @@
 # dARts
-Dieses Projekt soll eine E-Dart Scheibe in Automatenqualität, wie zum Beispiel dem Löwen Darts HB8 mit dem Scoreboard Dart-O-Mat 3000 vereinen.
+Dieses Projekt soll eine E-Dart Scheibe in Automatenqualität, wie zum Beispiel dem Löwen Darts HB8 mit dem Scoreboard Dart-O-Mat 3000 vereinen. Die volle Dokumentation findet man hier: [https://darts.readthedocs.io/en/latest/](https://darts.readthedocs.io/en/latest/)[![Dokumentationsstatus](https://readthedocs.org/projects/dARts/badge/?version=latest)](https://darts.readthedocs.io/en/latest/)
 
 # Hardware
 Die Hardware besteht aus einem Ersatzteile Satz für einen Löwen Darts Automaten inklusive Matrix, Spinne, Segmente, ... und außerdem aus einem Arduino Mega 2560 mit Programm und schlussendlich einem Raspberry PI für die Kommunikation mit dem Scoreboard.
