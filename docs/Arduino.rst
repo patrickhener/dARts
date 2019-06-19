@@ -6,7 +6,7 @@ Nachfolgend wird der verwendete Arduino sketch beschrieben
 Der Sketch
 ----------
 
-.. literalinclude :: ../arduino/dARts.ino
+.. literalinclude:: ../arduino/dARts.ino
    :language: C++
 
 PINS
@@ -35,7 +35,7 @@ checkButton()
 In dieser Funktion wird der Knopf ausgelesen. Wird er gedrückt wird das Wort "KNOPF" auf der seriellen Konsole geschrieben. Es erfolgt eine Wartezeit.
 
 WurfSchicken(int x, int y)
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In dieser Funktion wird der ermittelte Wurf auf die serielle Konsole geschrieben. Der Funktion wird ein Wert des zweidimensionalen Matrixarrays übergeben. Dieser wird dann im Array nachgeschaut und auf die Konsole geschrieben. Außerdem wird die Variable bHitDetected (also Wurf erkannt) auf true gesetzt. Im Falle, dass ein Piezo ausgelöst wurde wird so verhindert, dass ein Fehlwurf anstatt des erkannten Wurfwertes gebucht wird.
 

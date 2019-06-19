@@ -8,7 +8,7 @@ In diesem Kapitel wird der verwendete Python Koppler beschrieben
 Programmcode
 ------------
 
-.. literalinclude :: ../python/dARts.py
+.. literalinclude:: ../python/dARts.py
    :language: Python
 
 Imports

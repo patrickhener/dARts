@@ -16,6 +16,7 @@ Gestützt vom Scoreboard System |Dart-O-Mat 3000|
 .. toctree::
    :maxdepth: 1
 
+   Motivation.rst
    Hardware.rst
    Holz.rst
    Pinbelegung.rst
