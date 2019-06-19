@@ -19,6 +19,7 @@ Gestützt vom Scoreboard System |Dart-O-Mat 3000|
    Motivation.rst
    Hardware.rst
    Holz.rst
+   Kosten.rst
    Pinbelegung.rst
    Bauanleitung.rst
    Arduino.rst

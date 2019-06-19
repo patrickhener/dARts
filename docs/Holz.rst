@@ -17,11 +17,6 @@ Sperrholz/Multiplex
 * 3x Stirnbretter: 750mm x 200mm x 12mm
 * Boden: 750mm x 200mm x 12mm
 
-Profilleisten
--------------
-
-* Aufsteckrahmen Leiste als Blende: 750mm + 750mm + 600mm
-
 .. |Video| raw:: html
 
     <a href="https://www.youtube.com/watch?v=mV_-dOnWDoY">Strappis Youtube Video</a>

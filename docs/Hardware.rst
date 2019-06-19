@@ -15,7 +15,6 @@ Die nachfolgenden Teile sind eine Empfehlung und entsprechen den Teilen, die ich
 * Ultraschall Sensor: |US|
 * Löwen Komplett Set inklusive Matrix: |LKS|
 * Schloss: |Schloss|
-* Matrix-Schaumstoff: |SS|
 
 Sonstiges hatte ich noch
 ------------------------
@@ -58,7 +57,3 @@ Was man sonst noch so braucht, habe ich noch rumliegen gehabt:
 .. |Schloss| raw:: html
 
     <a href="https://dartdoktor.de/schloss/311-schloss-target-dart-tuer.html?search_query=Schloss+-+Target+Dart+Tur%09&results=449" target="_blank">DartDoktor.de</a>
-
-.. |SS| raw:: html
-
-    <a href="https://dartdoktor.de/dartscheibe-segmente-spider/277-matrix-schaumstoffschutz.html?search_query=Matrix+Schaumstoffschutz&results=26" target="_blank">DartDoktor.de</a>
