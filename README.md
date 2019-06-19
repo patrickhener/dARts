@@ -22,3 +22,6 @@ Hierin befindet sich eine Gerber Datei mit einem PCB Design für das Bestellen e
 
 ## python
 Hierin enthalten ist der Koppler Script, der den Arduino mit dem Dart-O-Mat 3000 verbindet.
+
+## system
+Hierin befinden sich Konfigurationsdateien für das Setup eines WLAN Hotspots mit DHCP, DNS und Captive Portal
