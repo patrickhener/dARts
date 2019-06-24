@@ -38,17 +38,21 @@ unsigned int iLastThrow = 0;
 
 // Piezo
 int wert[2] = { 0, 0 };
-int schwelle = 200;
+int schwelle = 20;
 bool bFehlwurf = false;
 // Button
 int buttonState = 0;
 // Ultraschall
 long duration;
 int distance;
-int ultraschwelle = 10;
+int ultraschwelle = 65;
+bool bUsAn = false;
+bool bBewegungErkannt = false;
 // Input String von PI zu Arduino
 String inputString = "";
 boolean stringComplete = false;
+//
+int wurfanzahl = 0;
 
 /***********************/
 /*       FUNKTIONEN    */
@@ -70,7 +74,6 @@ void Ultraschall() {
 	if (distance <= ultraschwelle) {
 		// Bislang ausgabe Seriell
 		Serial.println("PFEILE");
-		delay(500);
 	}
 }
 
@@ -81,7 +84,7 @@ void checkButton() {
 	// Wenn gedrückt Ausgabe
 	if (buttonState == LOW) {
 		Serial.println("KNOPF");
-		delay(100);
+		delay(500);
 	}
 }
 
@@ -155,10 +158,13 @@ void Blinken(int Anzahl) {
 void ReagiereAufSerialString() {
 	if ( inputString.indexOf("BAN") != -1) {
 		digitalWrite(buttonLedPin, HIGH);
+		bUsAn = true;
 	} else if (inputString.indexOf("BAUS") != -1) {
 		digitalWrite(buttonLedPin, LOW);
-	} else if (inputString.indexOf("BB") != -1) {
-		Blinken(1);
+		bUsAn = false;
+		bBewegungErkannt = false;
+	} else if (inputString.indexOf("PERK") != -1) {
+		bBewegungErkannt = true;
 	}
 	inputString = "";
 	stringComplete = false;
@@ -190,15 +196,25 @@ void setup() {
 	// Button blinken lassen
 	Blinken(3);
 	// Beginne serielle Übertragung an PC
-	Serial.begin(115200);
+	Serial.begin(9600);
 }
 
 /* Main loop */
 void loop() {
-	Ultraschall();
-	checkButton();
-	WurfAuswerten();
-	FehlwurfErkennen();
+	if (!bUsAn) {
+		WurfAuswerten();
+		FehlwurfErkennen();
+		checkButton();
+	} else if (bUsAn) {
+		checkButton();
+		if (!bBewegungErkannt) {
+			Ultraschall();
+		} else {
+			Blinken(1);
+		}
+	} else {
+		Serial.println("Error in Main Loop");
+	}
 
 	if(stringComplete)
 		ReagiereAufSerialString();

@@ -52,7 +52,7 @@ if cfg:
     # Serielle Konfiguration
     ser = serial.Serial()
     ser.port = serialport
-    ser.baudrate = 115200
+    ser.baudrate = 9600
     ser.timeout = 1
 
 # Port öffnen
@@ -165,7 +165,7 @@ def makeRequest(urlpart):
         logging.info("SCOREBOARDANTWORT: {}".format(response_text))
         return response_text
     except:
-        logging.error("Fehler bei der Scoreboard Anfrage")
+        logging.error("Exception in makeRequest")
 
 
 def requestRematch():
@@ -178,7 +178,7 @@ def requestRematch():
         set_won(False)
         return response_text
     except:
-        logging.error("Fehler bei der Rematch Anfrage")
+        logging.error("Exception in requestRematch()")
 
 
 def requestStuck():
@@ -193,7 +193,7 @@ def requestStuck():
         time.sleep(.25)
         return response_text
     except:
-        logging.error("Fehler bei der Stuck Anfrage")
+        logging.error("Exception ind requestStuck()")
 
 
 def nextPlayer():
@@ -207,7 +207,7 @@ def nextPlayer():
         logging.info("SCOREBOARDANTWORT: {}".format(response_text))
         return response_text
     except:
-        logging.error("Fehler bei der Scoreboard Anfrage")
+        logging.error("Exception in nextPlayer()")
 
 
 def get_wurfzaehler():
@@ -220,7 +220,7 @@ def get_wurfzaehler():
             check_button_on(response_text)
         return response_text
     except:
-        logging.error("Kein Spiel gestartet")
+        logging.error("Exception in get_Wurfzaehler()")
 
 
 def check_button_on(wurfzaehler):
@@ -233,7 +233,7 @@ def check_button_on(wurfzaehler):
             if knopf_an:
                 button_off()
     except:
-        logging.error("Button Check fehlgeschlagen")
+        logging.error("Exception in check_button_on()")
 
 
 def button_on():
@@ -248,11 +248,6 @@ def button_off():
     outputString = "BAUS\n"
     ser.write(outputString.encode('utf-8'))
     knopf_an = False
-
-
-def button_blinken():
-    button_on()
-    button_off()
 
 
 def read_serial():
@@ -382,13 +377,13 @@ def main():
             elif string == "PFEILE":
                 wurfzaehler = get_wurfzaehler()
                 if get_pfeile_holen() and wurfzaehler == "3":
+                    outputString = "PERK\n"
+                    ser.write(outputString.encode('utf-8'))
                     time.sleep(int(pfeilzeit))
                     antwort = nextPlayer()
                     set_pfeile_holen(False)
                     set_pfeile_abgezogen(True)
                     button_off()
-                else:
-                    logging.error("Das sollte niemals angezeigt werden")
 
 # Main Loop
 if __name__ == "__main__":
