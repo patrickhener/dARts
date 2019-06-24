@@ -25,3 +25,16 @@ Hierin enthalten ist der Koppler Script, der den Arduino mit dem Dart-O-Mat 3000
 
 ## system
 Hierin befinden sich Konfigurationsdateien für das Setup eines WLAN Hotspots mit DHCP, DNS und Captive Portal
+
+# Demo
+
+Hier gibt es die Demo Videos:
+
+## Spiel einstellen
+[![Spiel einstellen](https://img.youtube.com/vi/NGI12focr8E/0.jpg)](https://www.youtube.com/watch?v=NGI12focr8E)
+
+## 301 Spiel
+[![301](https://img.youtube.com/vi/cbdSK9wNLu8/0.jpg)](https://www.youtube.com/watch?v=cbdSK9wNLu8)
+
+## Cricket Spiel
+[![Cricket](https://img.youtube.com/vi/CJ5lnEe3wmM/0.jpg)](https://www.youtube.com/watch?v=CJ5lnEe3wmM)

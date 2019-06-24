@@ -329,7 +329,34 @@ Für den Abschlusstest verwende ich mein Dart-O-Mat 3000 Scoreboard und ein Tabl
 
 Nun müssen alle Funktionen getestet werden (Fehlwurf, Wurferkennung, Knopf, Ultraschallsensor, ...)
 
-Abschließende Bilder
---------------------
+Abschließende Demo
+------------------
 
+Hier nun noch die passenden Demo Videos.
 
+Spiel einstellen
+^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+   <iframe src="https://www.youtube.com/embed/NGI12focr8E" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+  </div>
+
+301
+^^^
+
+.. raw:: html
+
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+   <iframe src="https://www.youtube.com/embed/cbdSK9wNLu8" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+  </div>
+
+Cricket
+^^^^^^^
+
+.. raw:: html
+
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+   <iframe src="https://www.youtube.com/embed/CJ5lnEe3wmM" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+  </div>
