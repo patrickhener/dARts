@@ -377,8 +377,9 @@ def main():
                             button_off()
 
             elif string == "PFEILE":
-                wurfzaehler = get_wurfzaehler()
-                if get_pfeile_holen() and wurfzaehler == "3":
+                #wurfzaehler = get_wurfzaehler()
+                #if get_pfeile_holen() and wurfzaehler == "3":
+                if get_pfeile_holen():
                     outputString = "PERK\n"
                     ser.write(outputString.encode('utf-8'))
                     time.sleep(int(pfeilzeit))

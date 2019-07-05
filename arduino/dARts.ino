@@ -72,7 +72,7 @@ void Ultraschall() {
 	// Berechnung der Entfernung
 	distance = duration*0.034/2;
 	// Prüfen ob sich jemand genähert hat
-	if (distance <= ultraschwelle) {
+	if (distance > ultraschwelle) {
 		// Bislang ausgabe Seriell
 		Serial.println("PFEILE");
 	}
@@ -91,6 +91,8 @@ int UltraschallMessen() {
 	duration = pulseIn(echoPin, HIGH);
 	// Berechnung der Entfernung
 	distance = duration*0.034/2;
+	// Delay
+	delay(100);
 	// Entfernung zurückgeben
 	return distance;
 }
@@ -175,7 +177,7 @@ void Blinken(int Anzahl) {
 
 void SchwelleDefinieren() {
 	int abstand = UltraschallMessen();
-	ultraschwelle = abstand - 5;
+	ultraschwelle = abstand + 3;
 	bSchwelleDefiniert = true;
 }
 
