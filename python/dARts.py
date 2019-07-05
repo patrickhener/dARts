@@ -204,6 +204,8 @@ def nextPlayer():
         if "Dart" in response_text:
             set_pfeile_holen(True)
             button_on()
+        outputString = "NEXT\n"
+        ser.write(outputString.encode('utf-8'))
         logging.info("SCOREBOARDANTWORT: {}".format(response_text))
         return response_text
     except:

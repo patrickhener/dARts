@@ -45,9 +45,10 @@ int buttonState = 0;
 // Ultraschall
 long duration;
 int distance;
-int ultraschwelle = 65;
+int ultraschwelle = 0;
 bool bUsAn = false;
 bool bBewegungErkannt = false;
+bool bSchwelleDefiniert = false;
 // Input String von PI zu Arduino
 String inputString = "";
 boolean stringComplete = false;
@@ -75,6 +76,23 @@ void Ultraschall() {
 		// Bislang ausgabe Seriell
 		Serial.println("PFEILE");
 	}
+}
+
+int UltraschallMessen() {
+	/* Ultraschall */
+	// trigPin frei machen
+	digitalWrite(trigPin, LOW);
+	delayMicroseconds(2);
+	// trigPin an für 10 micro secs
+	digitalWrite(trigPin, HIGH);
+	delayMicroseconds(10);
+	digitalWrite(trigPin, LOW);
+	// Lesen des Echo Pins
+	duration = pulseIn(echoPin, HIGH);
+	// Berechnung der Entfernung
+	distance = duration*0.034/2;
+	// Entfernung zurückgeben
+	return distance;
 }
 
 void checkButton() {
@@ -155,16 +173,26 @@ void Blinken(int Anzahl) {
 	}
 }
 
+void SchwelleDefinieren() {
+	int abstand = UltraschallMessen();
+	ultraschwelle = abstand - 5;
+	bSchwelleDefiniert = true;
+}
+
 void ReagiereAufSerialString() {
 	if ( inputString.indexOf("BAN") != -1) {
 		digitalWrite(buttonLedPin, HIGH);
 		bUsAn = true;
+		SchwelleDefinieren();
 	} else if (inputString.indexOf("BAUS") != -1) {
 		digitalWrite(buttonLedPin, LOW);
 		bUsAn = false;
 		bBewegungErkannt = false;
+		bSchwelleDefiniert = false;
 	} else if (inputString.indexOf("PERK") != -1) {
 		bBewegungErkannt = true;
+	} else if (inputString.indexOf("NEXT") != -1) {
+		bSchwelleDefiniert = false;
 	}
 	inputString = "";
 	stringComplete = false;
@@ -206,11 +234,15 @@ void loop() {
 		FehlwurfErkennen();
 		checkButton();
 	} else if (bUsAn) {
-		checkButton();
-		if (!bBewegungErkannt) {
-			Ultraschall();
+		if (bSchwelleDefiniert) {
+			checkButton();
+			if (!bBewegungErkannt) {
+				Ultraschall();
+			} else {
+				Blinken(1);
+			}
 		} else {
-			Blinken(1);
+			SchwelleDefinieren();
 		}
 	} else {
 		Serial.println("Error in Main Loop");
