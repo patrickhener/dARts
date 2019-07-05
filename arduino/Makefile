@@ -1,5 +1,3 @@
 ARDUINO_DIR = /usr/share/arduino
-ARCHITECTURE = avr
-BOARD_TAG = mega
-BOARD_SUB = atmega2560
+BOARD_TAG = mega2560
 include $(HOME)/.arduino_mk/Arduino.mk
