@@ -9,7 +9,7 @@ Wer gerne ein eiskaltes Bier spendieren möchte kann das hier tun:
 Die Hardware besteht aus einem Ersatzteile Satz für einen Löwen Darts Automaten inklusive Matrix, Spinne, Segmente, ... und außerdem aus einem Arduino Mega 2560 mit Programm und schlussendlich einem Raspberry PI für die Kommunikation mit dem Scoreboard.
 
 # Scoreboard
-Das Scoreboard ist nicht mit eingeschlossen und kann <a href="https://github.com/patrickhener/dart-o-mat-3000" target="_blank">hier</a> gefunden werden. Die Software kann auf dem Raspberry PI des Projektes mitbetrieben werden.
+Das Scoreboard ist nicht mit eingeschlossen und kann <a href="https://github.com/patrickhener/dart-o-mat-3000/tree/dARts" target="_blank">hier</a> gefunden werden. Die Software kann auf dem Raspberry PI des Projektes mitbetrieben werden.
 
 # Projektordner und Inhalte
 Dieses Projekt besteht aus mehreren Ordnern mit unterschiedlichen Inhalten.
