@@ -1,5 +1,5 @@
 # dARts
-Dieses Projekt soll eine E-Dart Scheibe in Automatenqualität, wie zum Beispiel dem Löwen Darts HB8 mit dem Scoreboard Dart-O-Mat 3000 vereinen. Die volle Dokumentation findet man hier:  
+Dieses Projekt soll eine E-Dart Scheibe in Automatenqualität, wie zum Beispiel dem Löwen Darts HB8 mit dem Scoreboard Dart-O-Mat 3000 vereinen (WICHTIG: dart-o-mat-3000 BRANCH "dARts" verwenden!). Die volle Dokumentation findet man hier:  
 [https://darts.readthedocs.io/en/latest/](https://darts.readthedocs.io/en/latest/)  
 [![Documentation Status](https://readthedocs.org/projects/darts/badge/?version=latest)](https://darts.readthedocs.io/en/latest/?badge=latest)  
 Wer gerne ein eiskaltes Bier spendieren möchte kann das hier tun:  
