@@ -1,3 +1,6 @@
+# DEPRECATED
+Dieses Projekt wird nicht mehr weiterentwickelt. Der Nachfolger findet sich hier: [DaSCR-Machine](https://github.com/dascr/dascr-machine), [dascr.org](https://dascr.org)
+
 # dARts
 Dieses Projekt soll eine E-Dart Scheibe in Automatenqualität, wie zum Beispiel dem Löwen Darts HB8 mit dem Scoreboard Dart-O-Mat 3000 vereinen (WICHTIG: dart-o-mat-3000 BRANCH "dARts" verwenden!). Die volle Dokumentation findet man hier:  
 [https://darts.readthedocs.io/en/latest/](https://darts.readthedocs.io/en/latest/)  
